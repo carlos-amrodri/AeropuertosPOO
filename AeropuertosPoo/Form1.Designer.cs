@@ -31,13 +31,17 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.vuelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.crearVuelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.verVuelosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.psajesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ventaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.vuelosToolStripMenuItem});
+            this.vuelosToolStripMenuItem,
+            this.psajesToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(640, 24);
@@ -47,7 +51,8 @@
             // vuelosToolStripMenuItem
             // 
             this.vuelosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.crearVuelosToolStripMenuItem});
+            this.crearVuelosToolStripMenuItem,
+            this.verVuelosToolStripMenuItem});
             this.vuelosToolStripMenuItem.Name = "vuelosToolStripMenuItem";
             this.vuelosToolStripMenuItem.Size = new System.Drawing.Size(54, 20);
             this.vuelosToolStripMenuItem.Text = "Vuelos";
@@ -58,6 +63,27 @@
             this.crearVuelosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.crearVuelosToolStripMenuItem.Text = "Crear Vuelos";
             this.crearVuelosToolStripMenuItem.Click += new System.EventHandler(this.crearVuelosToolStripMenuItem_Click);
+            // 
+            // verVuelosToolStripMenuItem
+            // 
+            this.verVuelosToolStripMenuItem.Name = "verVuelosToolStripMenuItem";
+            this.verVuelosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verVuelosToolStripMenuItem.Text = "Ver Vuelos";
+            this.verVuelosToolStripMenuItem.Click += new System.EventHandler(this.verVuelosToolStripMenuItem_Click);
+            // 
+            // psajesToolStripMenuItem
+            // 
+            this.psajesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ventaToolStripMenuItem});
+            this.psajesToolStripMenuItem.Name = "psajesToolStripMenuItem";
+            this.psajesToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
+            this.psajesToolStripMenuItem.Text = "Psajes";
+            // 
+            // ventaToolStripMenuItem
+            // 
+            this.ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
+            this.ventaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.ventaToolStripMenuItem.Text = "Venta";
             // 
             // Aeropuerto
             // 
@@ -83,6 +109,9 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem vuelosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem crearVuelosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem verVuelosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem psajesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ventaToolStripMenuItem;
     }
 }
 

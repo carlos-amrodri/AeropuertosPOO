@@ -30,10 +30,16 @@ namespace AeropuertosPoo.Datos
 
         public List<Vuelo> listado(string path)
         {
-            throw new NotImplementedException();
+            string url = urlBase + path;
+            using (StreamReader lector = new StreamReader(url))
+            {
+                string json = lector.ReadToEnd();
+                List<Vuelo> list = JsonConvert.DeserializeObject<List<Vuelo>>(json);
+                return list;
+            }
         }
 
-       private void salvar(List<Vuelo> list)
+        private void salvar(List<Vuelo> list)
         {
             //Genero la url con la base mas la del archivo
             string url = urlBase + "Vuelos.json";

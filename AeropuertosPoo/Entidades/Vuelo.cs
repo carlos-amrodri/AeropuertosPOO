@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AeropuertosPoo.Datos;
 
 namespace AeropuertosPoo.Entidades
 {
@@ -14,8 +15,8 @@ namespace AeropuertosPoo.Entidades
         public string numero { get; set; }
         public string company { get; set; }
         public string destino { get; set; }
-       
+        public Estados estado { get; set; }
 
-      
+
     }
 }

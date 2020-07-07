@@ -20,7 +20,7 @@ namespace AeropuertosPoo.Entidades
         #endregion
 
 
-        public void createVuelo(Aeronave avion, Aerolinea company, DateTime fecha,Destinos destino)
+        public Vuelo createVuelo(Aeronave avion, Aerolinea company, DateTime fecha,Destinos destino)
         {
             //Creo y seteo el vuelo
             _vuelo = new Vuelo();
@@ -29,6 +29,7 @@ namespace AeropuertosPoo.Entidades
             _vuelo.partida = fecha;
             _vuelo.numero = getNumbreVuelo();
             _vuelo.nave = avion.modelo;
+            _vuelo.estado = Estados.Creado;
             //Le pido al manejador que me retorne la capacidad
             iAeronave manage = new AeronaveManagement(avion);
             Capacidad c = manage.getCapacidad();
@@ -54,7 +55,7 @@ namespace AeropuertosPoo.Entidades
             //Persisto el nuevo vuelo
             VuelosData vdata = new VuelosData();
             vdata.agregar(_vuelo);
-           
+            return _vuelo;
         }
 
 

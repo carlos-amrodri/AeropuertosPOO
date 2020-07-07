@@ -12,7 +12,7 @@ using AeropuertosPoo.Entidades;
 
 namespace AeropuertosPoo
 {
-    public partial class CrearVuelo : Form
+    public partial class CrearVuelo : Form, iSujetoVuelo
     {
         public CrearVuelo()
         {
@@ -20,6 +20,8 @@ namespace AeropuertosPoo
         }
 
         SingletonDatos datos;
+        List<iObsVuelos> observadoresVuelo = new List<iObsVuelos>();
+        Vuelo vueloNuevo;
         
 
         private void CrearVuelo_Load(object sender, EventArgs e)
@@ -81,7 +83,21 @@ namespace AeropuertosPoo
             var aerolinea = (Aerolinea)cmboAerolinea.SelectedItem;
             var fecha = dateTimePicker1.Value;
             var desti =(Destinos) comboDestino.SelectedItem;
-            vuelmang.createVuelo(avion, aerolinea, fecha, desti);
+            vueloNuevo = vuelmang.createVuelo(avion, aerolinea, fecha, desti);
+            notificar();
+        }
+
+        public void agregar(iObsVuelos obs)
+        {
+            this.observadoresVuelo.Add(obs);
+        }
+
+        public void notificar()
+        {
+            foreach(iObsVuelos obs in observadoresVuelo)
+            {
+                obs.actualizar(vueloNuevo);
+            }
         }
     }
 }
