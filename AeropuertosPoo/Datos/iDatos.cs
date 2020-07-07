@@ -12,5 +12,6 @@ namespace AeropuertosPoo
         List<T> listado(string path);
         Result<T> getResultado(string path);
         void agregar(T myObject);
+        
     }
 }

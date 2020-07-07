@@ -50,17 +50,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CrearVuelo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrearVuelo.Designer.cs">
+      <DependentUpon>CrearVuelo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Datos\AerolineasData.cs" />
     <Compile Include="Datos\AerolineasXml.cs" />
+    <Compile Include="Datos\Destinos.cs" />
     <Compile Include="Datos\Result.cs" />
-    <Compile Include="Destinos.cs" />
+    <Compile Include="Datos\SingletonDatos.cs" />
+    <Compile Include="Datos\VuelosData.cs" />
     <Compile Include="Entidades\Aerolinea.cs" />
     <Compile Include="Entidades\Aeronave.cs" />
+    <Compile Include="Entidades\AeronaveManagement.cs" />
+    <Compile Include="Entidades\Asiento.cs" />
     <Compile Include="Entidades\Capacidad.cs" />
     <Compile Include="Entidades\iAeronave.cs" />
     <Compile Include="Entidades\mb1418.cs" />
     <Compile Include="Entidades\mb814.cs" />
     <Compile Include="Entidades\nave1114.cs" />
+    <Compile Include="Entidades\Vuelo.cs" />
+    <Compile Include="Entidades\VueloManagement.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +82,9 @@
     <Compile Include="Datos\iDatos.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CrearVuelo.resx">
+      <DependentUpon>CrearVuelo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>

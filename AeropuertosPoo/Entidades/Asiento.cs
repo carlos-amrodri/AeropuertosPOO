@@ -6,8 +6,10 @@ using System.Threading.Tasks;
 
 namespace AeropuertosPoo.Entidades
 {
-    public interface iAeronave
+    public class Asiento
     {
-        Capacidad getCapacidad();
+        public int numero { get; set; }
+        public string categoria { get; set; }
+        public bool estado { get; set; }
     }
 }

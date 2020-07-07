@@ -16,8 +16,9 @@ namespace AeropuertosPoo.Entidades
     {
      
         public string matricula { get; set; }
+        public string modelo { get; set; }
         public int autonimia { get; set; }
-        protected Capacidad _capacidad;
+       
 
         //Constuctores
         public Aeronave(string matri)
@@ -32,8 +33,11 @@ namespace AeropuertosPoo.Entidades
         {
             return this.autonimia;
         }
-       
 
         
+        
+
+
+
     }
 }

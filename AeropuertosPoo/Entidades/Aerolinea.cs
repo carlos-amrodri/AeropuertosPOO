@@ -10,30 +10,31 @@ namespace AeropuertosPoo.Entidades
   
     public class Aerolinea
     {
-        [JsonProperty("nombre")]
+      
         public string nombre { get; set; }
-        [JsonProperty("aeronaveList")]
         public List<Aeronave> aeronaveList { get; set; }
-        
+        public List<Vuelo> vuelos { get; set; }
 
-    
+
+
         public Aerolinea() {
             this.aeronaveList = new List<Aeronave>();
         }
-
-
-        #region Metodos
         public Aerolinea(string _nombre)
         {
             this.nombre = _nombre;
             this.aeronaveList = new List<Aeronave>();
         }
- 
 
-        
+
+        #region Metodos
         public void addNave(Aeronave nave)
         {
             this.aeronaveList.Add(nave);
+        }
+        public void addVuelo(Vuelo vuelo)
+        {
+            this.vuelos.Add(vuelo);
         }
         #endregion /Metodos
     }

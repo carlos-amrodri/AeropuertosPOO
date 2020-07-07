@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using AeropuertosPoo.Entidades;
 using System.IO;
-using Newtonsoft.Json;
+using Newtonsoft.Json;//Importante !! esta es la libreria que me permite manejar json
 using System.Reflection;
 using System.Xml.Serialization;  
 
@@ -24,23 +24,21 @@ namespace AeropuertosPoo.Datos
 
         public Result<Aerolinea> getResultado(string path)
         {
-            string url = urlBase + "Aerolineas.json";
+            string url = urlBase + path;
             Result<Aerolinea> result = new Result<Aerolinea>();
-            StreamReader lector = new StreamReader(url);
+            ; 
             try
             {
-                
+                StreamReader lector = new StreamReader(url);
                 string json = lector.ReadToEnd();
                 result.listado = JsonConvert.DeserializeObject<List<Aerolinea>>(json);
+                lector.Close();
             }
             catch (Exception e)
             {
                 result.error = e.ToString();
             }
-            finally
-            {
-                lector.Close();
-            }
+    
             //Nota!! Encoder algunos ejemplos puede que encuentren el uso del lector de esta menera
             //using (StreamReader lector = new StreamReader(url))
             //{
