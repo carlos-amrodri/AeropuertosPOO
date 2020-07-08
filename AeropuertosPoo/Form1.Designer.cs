@@ -60,14 +60,14 @@
             // crearVuelosToolStripMenuItem
             // 
             this.crearVuelosToolStripMenuItem.Name = "crearVuelosToolStripMenuItem";
-            this.crearVuelosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.crearVuelosToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.crearVuelosToolStripMenuItem.Text = "Crear Vuelos";
             this.crearVuelosToolStripMenuItem.Click += new System.EventHandler(this.crearVuelosToolStripMenuItem_Click);
             // 
             // verVuelosToolStripMenuItem
             // 
             this.verVuelosToolStripMenuItem.Name = "verVuelosToolStripMenuItem";
-            this.verVuelosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.verVuelosToolStripMenuItem.Size = new System.Drawing.Size(140, 22);
             this.verVuelosToolStripMenuItem.Text = "Ver Vuelos";
             this.verVuelosToolStripMenuItem.Click += new System.EventHandler(this.verVuelosToolStripMenuItem_Click);
             // 
@@ -84,6 +84,7 @@
             this.ventaToolStripMenuItem.Name = "ventaToolStripMenuItem";
             this.ventaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.ventaToolStripMenuItem.Text = "Venta";
+            this.ventaToolStripMenuItem.Click += new System.EventHandler(this.ventaToolStripMenuItem_Click);
             // 
             // Aeropuerto
             // 

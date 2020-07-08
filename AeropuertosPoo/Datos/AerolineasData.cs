@@ -7,7 +7,8 @@ using AeropuertosPoo.Entidades;
 using System.IO;
 using Newtonsoft.Json;//Importante !! esta es la libreria que me permite manejar json
 using System.Reflection;
-using System.Xml.Serialization;  
+using System.Xml.Serialization; 
+ 
 
 namespace AeropuertosPoo.Datos
 {
@@ -26,7 +27,7 @@ namespace AeropuertosPoo.Datos
         {
             string url = urlBase + path;
             Result<Aerolinea> result = new Result<Aerolinea>();
-            ; 
+             
             try
             {
                 StreamReader lector = new StreamReader(url);

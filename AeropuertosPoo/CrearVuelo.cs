@@ -99,6 +99,11 @@ namespace AeropuertosPoo
                 obs.actualizar(vueloNuevo);
             }
         }
+
+        private void comboAvion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

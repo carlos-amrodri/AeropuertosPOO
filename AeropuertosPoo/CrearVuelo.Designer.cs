@@ -92,6 +92,7 @@
             this.comboAvion.Name = "comboAvion";
             this.comboAvion.Size = new System.Drawing.Size(121, 21);
             this.comboAvion.TabIndex = 4;
+            this.comboAvion.SelectedIndexChanged += new System.EventHandler(this.comboAvion_SelectedIndexChanged);
             this.comboAvion.SelectionChangeCommitted += new System.EventHandler(this.comboAvion_SelectionChangeCommitted);
             // 
             // gridAviones

@@ -72,5 +72,12 @@ namespace AeropuertosPoo
         {
             mostarVuelos();
         }
+
+        private void ventaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FomrVentaPasaje formventa = new FomrVentaPasaje();
+            formventa.MdiParent = this;
+            formventa.Show();
+        }
     }
 }
